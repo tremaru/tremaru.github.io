@@ -13,7 +13,7 @@
          {
           "name": "Piranha AVR Boards",
           "architecture": "avr",
-          "version": "1.4.13",
+          "version": "1.0.0",
           "category": "Tremka",
           "url": "https://tremaru.github.io/arduino-board-index/boards/trema-1.0.0.tar",
           "archiveFileName": "trema-1.0.0.tar",
