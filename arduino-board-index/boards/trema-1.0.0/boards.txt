@@ -1,0 +1,20 @@
+
+##############################################################
+metro.name=Piranga UNO
+metro.upload.tool=arduino:avrdude
+metro.upload.protocol=arduino
+metro.upload.maximum_size=32256
+metro.upload.maximum_data_size=2048
+metro.upload.speed=115200
+metro.bootloader.tool=arduino:avrdude
+metro.bootloader.low_fuses=0xFF
+metro.bootloader.high_fuses=0xDE
+metro.bootloader.extended_fuses=0x05
+metro.bootloader.unlock_bits=0x3F
+metro.bootloader.lock_bits=0x0F
+metro.bootloader.file=arduino:optiboot/optiboot_atmega328.hex
+metro.build.mcu=atmega328p
+metro.build.f_cpu=16000000L
+metro.build.board=AVR_METRO
+metro.build.core=arduino:arduino
+metro.build.variant=arduino:standard
