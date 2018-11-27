@@ -15,10 +15,10 @@
           "architecture": "avr",
           "version": "1.4.13",
           "category": "Tremka",
-          "url": "https://adafruit.github.io/arduino-board-index/boards/adafruit-avr-1.4.13.tar.bz2",
-          "archiveFileName": "adafruit-avr-1.4.13.tar.bz2",
-          "checksum": "SHA-256:84e75b705a36bf3ce08d56238846bb81d45a1dd337a290d16e2343186cceeb75",
-          "size": "644224",
+          "url": "https://tremaru.github.io/arduino-board-index/boards/trema-1.0.0.tar.bz2",
+          "archiveFileName": "trema-1.0.0.tar.bz2",
+          "checksum": "SHA-256:c8b1a2a8463e6a52b65694e234611851a8291c9d42e3f4e9a6f91752f3584c55",
+          "size": "5983",
           "help": {
             "online": "https://wiki.trema.ru"
           },
