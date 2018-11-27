@@ -1,17 +1,17 @@
 {
   "packages": [
     {
-      "websiteURL": "https://adafruit.com",
+      "websiteURL": "https://trema.ru",
       "tools": [],
-      "name": "adafruit",
-      "email": "info@adafruit.com",
+      "name": "Trema.RU",
+      "email": "info@trema.ru",
       "help": {
-        "online": "https://forums.adafruit.com"
+        "online": "https://wiki.trema.ru"
       },
-      "maintainer": "Trema.RU",
+      "maintainer": "TREMA.RU",
       "platforms": [
          {
-          "name": "Trema.RU AVR Boards",
+          "name": "Piranha AVR Boards",
           "architecture": "avr",
           "version": "1.4.13",
           "category": "Tremka",
