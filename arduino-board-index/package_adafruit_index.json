@@ -14,7 +14,7 @@
           "name": "Piranha AVR Boards",
           "architecture": "avr",
           "version": "1.0.0",
-          "category": "Tremka",
+          "category": "Trema.RU",
           "url": "https://tremaru.github.io/arduino-board-index/boards/trema-1.0.0.tar",
           "archiveFileName": "trema-1.0.0.tar",
           "checksum": "SHA-256:200462cceab3a7c7baaefd45ba97df35c3445972baeb4ace46af725c3d2e8106",
