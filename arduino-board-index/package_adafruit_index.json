@@ -111,10 +111,10 @@
       "help": {
         "online": "https://forums.adafruit.com"
       },
-      "maintainer": "Adafruit",
+      "maintainer": "Adafruit1",
       "platforms": [
          {
-          "name": "Adafruit AVR Boards",
+          "name": "Adafruit AVR Boards1",
           "architecture": "avr",
           "version": "1.4.13",
           "category": "Adafruit",
@@ -127,25 +127,25 @@
           },
           "boards": [
             {
-              "name": "Adafruit Flora"
+              "name": "1Adafruit Flora"
             },
             {
-              "name": "Adafruit Gemma 8MHz"
+              "name": "1Adafruit Gemma 8MHz"
             },
             {
-              "name": "Adafruit Bluefruit Micro"
+              "name": "1Adafruit Bluefruit Micro"
             },
             {
-              "name": "Adafruit Feather 32u4"
+              "name": "1Adafruit Feather 32u4"
             },
             {
-              "name": "Adafruit Metro"
+              "name": "1Adafruit Metro"
             },
             {
-              "name": "Adafruit Metro Mini"
+              "name": "1Adafruit Metro Mini"
             },
             {
-              "name": "Adafruit ItsyBitsy 32u4"
+              "name": "1Adafruit ItsyBitsy 32u4"
             },
             {
               "name": "Adafruit Pro Trinket 5V/16MHz (USB)"
