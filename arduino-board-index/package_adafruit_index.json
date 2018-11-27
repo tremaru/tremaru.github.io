@@ -8,59 +8,26 @@
       "help": {
         "online": "https://forums.adafruit.com"
       },
-      "maintainer": "Adsafsafruit1",
+      "maintainer": "Trema.RU",
       "platforms": [
          {
-          "name": "Adafruit AVR Boards1",
+          "name": "Trema.RU AVR Boards",
           "architecture": "avr",
           "version": "1.4.13",
-          "category": "Adafruit",
+          "category": "Tremka",
           "url": "https://adafruit.github.io/arduino-board-index/boards/adafruit-avr-1.4.13.tar.bz2",
           "archiveFileName": "adafruit-avr-1.4.13.tar.bz2",
           "checksum": "SHA-256:84e75b705a36bf3ce08d56238846bb81d45a1dd337a290d16e2343186cceeb75",
           "size": "644224",
           "help": {
-            "online": "https://forums.adafruit.comfsgdfsgdfvcvzxc"
+            "online": "https://wiki.trema.ru"
           },
           "boards": [
             {
-              "name": "1AdDDDDDafruit Flora"
+              "name": "Piranha UNO"
             },
             {
-              "name": "1Adafruit Gemma 8MHz"
-            },
-            {
-              "name": "1Adafruit Bluefruit Micro"
-            },
-            {
-              "name": "1Adafruit Feather 32u4"
-            },
-            {
-              "name": "1Adafruit Metro"
-            },
-            {
-              "name": "1Adafruit Metro Mini"
-            },
-            {
-              "name": "DDDDD1Adafruit ItsyBitsy 32u4"
-            },
-            {
-              "name": "Adafruit Pro Trinket 5V/16MHz (USB)"
-            },
-            {
-              "name": "DDDDDAdafruit Pro Trinket 3V/12MHz (USB)"
-            },
-            {
-              "name": "Adafruit Pro Trinket 5V/16MHz (FTDI)"
-            },
-            {
-              "name": "Adafruit Pro Trinket 3V/12MHz (FTDI)"
-            },
-            {
-              "name": "AdDDDDDafruit Trinket 8MHz"
-            },
-            {
-              "name": "ADDDDDdafruit Trinket 16MHz"
+              "name": "Piranha PRO MINI "
             }
           ],
           "toolsDependencies": []
