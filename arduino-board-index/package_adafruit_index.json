@@ -2,7 +2,6 @@
   "packages": [
     {
       "websiteURL": "https://adafruit.com",
-      "tools": ,
       "name": "adafruit",
       "email": "info@adafruit.com",
       "help": {
