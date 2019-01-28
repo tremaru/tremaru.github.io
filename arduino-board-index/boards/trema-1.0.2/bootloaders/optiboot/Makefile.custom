@@ -1,0 +1,32 @@
+#
+# Makefile for "custom" platforms.   Add your board here.
+#
+# * Copyright 2013-2015 by Bill Westfield.  Part of Optiboot.
+# * This software is licensed under version 2 of the Gnu Public Licence.
+# * See optiboot.c for details.
+
+
+wildfire: TARGET = $@
+wildfire: CHIP = atmega1284p
+wildfire:
+	$(MAKE) $(CHIP) AVR_FREQ=16000000L LED=B5
+	mv $(PROGRAM)_$(CHIP).hex $(PROGRAM)_$(TARGET).hex
+	mv $(PROGRAM)_$(CHIP).lst $(PROGRAM)_$(TARGET).lst
+
+uino-1284p: TARGET = $@
+uino-1284p: CHIP = atmega1284p
+uino-1284p:
+	$(MAKE) $(CHIP) AVR_FREQ=16000000L LED=C2
+	mv $(PROGRAM)_$(CHIP).hex $(PROGRAM)_$(TARGET).hex
+	mv $(PROGRAM)_$(CHIP).lst $(PROGRAM)_$(TARGET).lst
+	
+uino-1284p_isp: uino-1284p
+uino-1284p_isp: TARGET = uino-1284p
+uino-1284p_isp: MCU_TARGET = atmega1284p
+# 1024 byte boot
+uino-1284p_isp: HFUSE ?= DE
+# Full swing xtal (16MHz) 16KCK/14CK+65ms
+uino-1284p_isp: LFUSE ?= F7
+# 2.7V brownout
+uino-1284p_isp: EFUSE ?= FD
+uino-1284p_isp: isp
