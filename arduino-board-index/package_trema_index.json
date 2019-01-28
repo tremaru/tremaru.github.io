@@ -31,22 +31,8 @@
             }
           ],
           "toolsDependencies": []
-        }
-      ]
-    }
-  ],
-    "packages": [
-    {
-      "websiteURL": "https://trema.ru",
-      "tools": [],
-      "name": "Trema.RU",
-      "email": "info@trema.ru",
-      "help": {
-        "online": "https://wiki.trema.ru"
-      },
-      "maintainer": "TREMA.RU",
-      "platforms": [
-         {
+        },
+		         {
           "name": "Piranha AVR Boards",
           "architecture": "avr",
           "version": "1.0.1",
