@@ -1,7 +1,7 @@
 
 ##############################################################
 PiranhaUNO.name=Piranha UNO
-PiranhaUNO.upload.tool=avrdude
+PiranhaUNO.upload.tool=arduino:avrdude
 PiranhaUNO.upload.protocol=arduino
 PiranhaUNO.upload.maximum_size=32256
 PiranhaUNO.upload.maximum_data_size=2048
@@ -22,7 +22,6 @@ PiranhaUNO.build.core=arduino:arduino
 PiranhaUNO.build.variant=arduino:standard
 PiranhaUNO.vid.0=0x0403
 PiranhaUNO.pid.0=0x6015
-
 
 ##############################################################
 
