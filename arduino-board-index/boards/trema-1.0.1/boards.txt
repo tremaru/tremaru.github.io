@@ -69,6 +69,6 @@ PiranhaUSBUART.menu.cpu.atmega328.bootloader.file=optiboot/optiboot_atmega328-Mi
 
 PiranhaUSBUART.build.mcu=atmega328p
 PiranhaUSBUART.build.f_cpu=16000000L
-PiranhaUSBUART.build.board=AVR_PiranhaProMini
+PiranhaUSBUART.build.board=PiranhaUSBUART
 PiranhaUSBUART.build.core=arduino:arduino
 PiranhaUSBUART.build.variant=arduino:standard
