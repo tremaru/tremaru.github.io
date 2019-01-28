@@ -39,8 +39,8 @@
           "category": "Trema.RU",
           "url": "https://tremaru.github.io/arduino-board-index/boards/trema-1.0.1.tar",
           "archiveFileName": "trema-1.0.1.tar",
-          "checksum": "SHA-256:58cbc1ae95f6ae2032dbf88f7139f8c38b3a400d8c243f822d409636b4306015",
-          "size": "4096",
+          "checksum": "SHA-256:8cfa9f52f70c35fe529750a2a79afe09538b1c965ce7726533978e8350291f20",
+          "size": "6144",
           "help": {
             "online": "https://wiki.trema.ru"
           },
