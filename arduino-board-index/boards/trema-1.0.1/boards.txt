@@ -49,7 +49,26 @@ PiranhaPRO.build.variant=arduino:standard
 
 ##############################################################
 
-
 PiranhaUSBUART.name=Converter USB-UART (Piranha)
 PiranhaUSBUART.vid.0=0x0403
 PiranhaUSBUART.pid.0=0x6014
+
+PiranhaUSBUART.upload.tool=avrdude
+PiranhaUSBUART.upload.protocol=arduino
+PiranhaUSBUART.upload.maximum_size=32256
+PiranhaUSBUART.upload.maximum_data_size=2048
+PiranhaUSBUART.upload.speed=115200
+
+PiranhaUSBUART.bootloader.tool=avrdude
+PiranhaUSBUART.bootloader.low_fuses=0xff
+PiranhaUSBUART.bootloader.unlock_bits=0x3F
+PiranhaUSBUART.bootloader.lock_bits=0x0F
+PiranhaUSBUART.menu.cpu.atmega328.bootloader.high_fuses=0xd8
+PiranhaUSBUART.menu.cpu.atmega328.bootloader.extended_fuses=0xFD
+PiranhaUSBUART.menu.cpu.atmega328.bootloader.file=optiboot/optiboot_atmega328-Mini.hex
+
+PiranhaUSBUART.build.mcu=atmega328p
+PiranhaUSBUART.build.f_cpu=16000000L
+PiranhaUSBUART.build.board=AVR_PiranhaProMini
+PiranhaUSBUART.build.core=arduino:arduino
+PiranhaUSBUART.build.variant=arduino:standard
