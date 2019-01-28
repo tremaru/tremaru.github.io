@@ -1,7 +1,7 @@
 
 ##############################################################
 PiranhaUNO.name=Piranha UNO
-PiranhaUNO.upload.tool=arduino:avrdude
+PiranhaUNO.upload.tool=avrdude
 PiranhaUNO.upload.protocol=arduino
 PiranhaUNO.upload.maximum_size=32256
 PiranhaUNO.upload.maximum_data_size=2048
@@ -32,44 +32,28 @@ PiranhaPRO.upload.tool=avrdude
 PiranhaPRO.upload.protocol=arduino
 
 PiranhaPRO.bootloader.tool=avrdude
+PiranhaPRO.bootloader.low_fuses=0xff
 PiranhaPRO.bootloader.unlock_bits=0x3F
 PiranhaPRO.bootloader.lock_bits=0x0F
 
-PiranhaPRO.build.board=AVR_PRO
+PiranhaPRO.build.f_cpu=16000000L
+PiranhaPRO.build.board=AVR_MINI
 PiranhaPRO.build.core=arduino
 PiranhaPRO.build.variant=eightanaloginputs
 
-## Arduino Pro or Pro Mini (5V, 16 MHz) w/ ATmega328P
-## --------------------------------------------------
-PiranhaPRO.menu.cpu.16MHzatmega328=ATmega328P (5V, 16 MHz)
+PiranhaUNO.vid.0=0x0403
+PiranhaUNO.pid.0=0x6014
 
-PiranhaPRO.menu.cpu.16MHzatmega328.upload.maximum_size=30720
-PiranhaPRO.menu.cpu.16MHzatmega328.upload.maximum_data_size=2048
-PiranhaPRO.menu.cpu.16MHzatmega328.upload.speed=57600
+## Arduino Mini w/ ATmega328P
+## --------------------------
+PiranhaPRO.menu.cpu.atmega328=ATmega328P
 
-PiranhaPRO.menu.cpu.16MHzatmega328.bootloader.low_fuses=0xFF
-PiranhaPRO.menu.cpu.16MHzatmega328.bootloader.high_fuses=0xDA
-PiranhaPRO.menu.cpu.16MHzatmega328.bootloader.extended_fuses=0xFD
-PiranhaPRO.menu.cpu.16MHzatmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328.hex
+PiranhaPRO.menu.cpu.atmega328.upload.maximum_size=28672
+PiranhaPRO.menu.cpu.atmega328.upload.maximum_data_size=2048
+PiranhaPRO.menu.cpu.atmega328.upload.speed=115200
 
-PiranhaPRO.menu.cpu.16MHzatmega328.build.mcu=atmega328p
-PiranhaPRO.menu.cpu.16MHzatmega328.build.f_cpu=16000000L
+PiranhaPRO.menu.cpu.atmega328.bootloader.high_fuses=0xd8
+PiranhaPRO.menu.cpu.atmega328.bootloader.extended_fuses=0xFD
+PiranhaPRO.menu.cpu.atmega328.bootloader.file=optiboot/optiboot_atmega328-Mini.hex
 
-## Arduino Pro or Pro Mini (3.3V, 8 MHz) w/ ATmega328P
-## ---------------------------------------------------
-PiranhaPRO.menu.cpu.8MHzatmega328=ATmega328P (3.3V, 8 MHz)
-
-PiranhaPRO.menu.cpu.8MHzatmega328.upload.maximum_size=30720
-PiranhaPRO.menu.cpu.8MHzatmega328.upload.maximum_data_size=2048
-PiranhaPRO.menu.cpu.8MHzatmega328.upload.speed=57600
-
-PiranhaPRO.menu.cpu.8MHzatmega328.bootloader.low_fuses=0xFF
-PiranhaPRO.menu.cpu.8MHzatmega328.bootloader.high_fuses=0xDA
-PiranhaPRO.menu.cpu.8MHzatmega328.bootloader.extended_fuses=0xFD
-PiranhaPRO.menu.cpu.8MHzatmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328_pro_8MHz.hex
-
-PiranhaPRO.menu.cpu.8MHzatmega328.build.mcu=atmega328p
-PiranhaPRO.menu.cpu.8MHzatmega328.build.f_cpu=8000000L
-
-##############################################################
-
+PiranhaPRO.menu.cpu.atmega328.build.mcu=atmega328p
