@@ -50,6 +50,6 @@ PiranhaPRO.build.variant=arduino:standard
 ##############################################################
 
 
-PiranhaPRO.name=Converter USB-UART (Piranha)
-PiranhaPRO.vid.0=0x0403
-PiranhaPRO.pid.0=0x6014
+PiranhaUSBUART.name=Converter USB-UART (Piranha)
+PiranhaUSBUART.vid.0=0x0403
+PiranhaUSBUART.pid.0=0x6014
