@@ -52,14 +52,14 @@ SDA D15   20 - PC1 (PCINT17/SDA)          SDA
 L1  D16   21 - PC2 (PCINT18/TCK)          L1
 L2  D17   22 - PC3 (PCINT19/TMS)          L2
 
-D18       23 - PC4 (PCINT20/TDO)
-D19       24 - PC5 (PCINT21/TDI)
-D20       25 - PC6 (PCINT22/TOSC1)
-D21       26 - PC7 (PCINT23/TOSC2)
-D22       40 - PB0 (PCINT8/T0/XCK0)
-D23       41 - PB1 (PCINT9/T1/CLK0)
-D24  A6   30 - PA7 (PCINT7/ADC7)
-D25  A7   31 - PA6 (PCINT6/ADC6)
+D18       23 - PC4 (PCINT20/TDO)		  L3
+D19       24 - PC5 (PCINT21/TDI)	      L4	
+D20       25 - PC6 (PCINT22/TOSC1)		
+D21       26 - PC7 (PCINT23/TOSC2)		
+D22       40 - PB0 (PCINT8/T0/XCK0)		Key4
+D23       41 - PB1 (PCINT9/T1/CLK0)		Key3	
+D24  A6   30 - PA7 (PCINT7/ADC7)        Key2
+D25  A7   31 - PA6 (PCINT6/ADC6) 		Key1
 
 */
 
@@ -77,7 +77,7 @@ D25  A7   31 - PA6 (PCINT6/ADC6)
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
-static const uint8_t LED_BUILTIN = 16;
+static const uint8_t LED_BUILTIN = 13;
 
 #define PIN_SPI_SS            (31)
 #define PIN_SPI_MOSI          (11)

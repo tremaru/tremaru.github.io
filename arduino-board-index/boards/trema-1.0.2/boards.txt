@@ -23,6 +23,35 @@ PiranhaUNO.build.variant=arduino:standard
 PiranhaUNO.vid.0=0x0403
 PiranhaUNO.pid.0=0x6015
 
+
+
+##############################################################
+
+
+PiranhaULTRA.name=Piranha ULTRA
+
+PiranhaULTRA.upload.tool=arduino:avrdude
+PiranhaULTRA.upload.protocol=arduino
+PiranhaULTRA.upload.maximum_size=130048
+PiranhaULTRA.upload.maximum_data_size=16384
+PiranhaULTRA.upload.speed=115200
+
+PiranhaULTRA.bootloader.tool=arduino:avrdude
+PiranhaULTRA.bootloader.low_fuses=0xf7
+PiranhaULTRA.bootloader.high_fuses=0xde
+PiranhaULTRA.bootloader.extended_fuses=0xfd
+PiranhaULTRA.bootloader.file=optiboot2/optiboot_uino-1284p.hex
+PiranhaULTRA.bootloader.unlock_bits=0x3F
+PiranhaULTRA.bootloader.lock_bits=0x0F
+
+PiranhaULTRA.build.mcu=atmega1284p
+PiranhaULTRA.build.f_cpu=16000000L
+PiranhaULTRA.build.board=AVR_PiranhaULTRA
+PiranhaULTRA.build.core=arduino:arduino
+PiranhaULTRA.build.variant=Piranha1284p
+
+
+
 ##############################################################
 
 PiranhaPRO.name=Piranha Pro Mini
@@ -72,28 +101,3 @@ PiranhaUSBUART.build.board=PiranhaUSBUART
 PiranhaUSBUART.build.core=arduino:arduino
 PiranhaUSBUART.build.variant=arduino:standard
 
-
-##############################################################
-
-
-uino1284p.name=Piranha ULTRA
-
-uino1284p.upload.tool=arduino:avrdude
-uino1284p.upload.protocol=arduino
-uino1284p.upload.maximum_size=130048
-uino1284p.upload.maximum_data_size=16384
-uino1284p.upload.speed=115200
-
-uino1284p.bootloader.tool=arduino:avrdude
-uino1284p.bootloader.low_fuses=0xf7
-uino1284p.bootloader.high_fuses=0xde
-uino1284p.bootloader.extended_fuses=0xfd
-uino1284p.bootloader.file=optiboot2/optiboot_uino-1284p.hex
-uino1284p.bootloader.unlock_bits=0x3F
-uino1284p.bootloader.lock_bits=0x0F
-
-uino1284p.build.mcu=atmega1284p
-uino1284p.build.f_cpu=16000000L
-uino1284p.build.board=AVR_PiranhaULTRA
-uino1284p.build.core=arduino:arduino
-uino1284p.build.variant=uino1284p
