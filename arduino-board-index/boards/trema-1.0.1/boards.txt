@@ -37,9 +37,9 @@ PiranhaPRO.bootloader.unlock_bits=0x3F
 PiranhaPRO.bootloader.lock_bits=0x0F
 
 PiranhaPRO.build.f_cpu=16000000L
-PiranhaPRO.build.board=AVR_MINI
-PiranhaPRO.build.core=arduino
-PiranhaPRO.build.variant=eightanaloginputs
+PiranhaPRO.build.board=AVR_PiranhaProMini
+PiranhaPRO.build.core=arduino:arduino
+PiranhaPRO.build.variant=arduino:standard
 
 PiranhaUNO.vid.0=0x0403
 PiranhaUNO.pid.0=0x6014
