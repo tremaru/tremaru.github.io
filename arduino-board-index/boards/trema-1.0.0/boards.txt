@@ -33,12 +33,12 @@ PiranhaPRO.upload.maximum_data_size=2048
 PiranhaPRO.upload.speed=115200
 
 PiranhaPRO.bootloader.tool=arduino:avrdude
-PiranhaPRO.bootloader.low_fuses=0xff
+PiranhaPRO.bootloader.low_fuses=0xFF
 PiranhaPRO.bootloader.unlock_bits=0x3F
 PiranhaPRO.bootloader.lock_bits=0x0F
-PiranhaPRO.menu.cpu.atmega328.bootloader.high_fuses=0xd8
-PiranhaPRO.menu.cpu.atmega328.bootloader.extended_fuses=0xFD
-PiranhaPRO.menu.cpu.atmega328.bootloader.file=optiboot/optiboot_atmega328-Mini.hex
+PiranhaPRO.bootloader.high_fuses=0xd8
+PiranhaPRO.bootloader.extended_fuses=0xFD
+PiranhaPRO.bootloader.file=optiboot/optiboot_atmega328-Mini.hex
 
 PiranhaPRO.build.mcu=atmega328p
 PiranhaPRO.build.f_cpu=16000000L
