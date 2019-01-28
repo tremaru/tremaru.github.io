@@ -19,6 +19,7 @@ PiranhaUNO.build.board=AVR_PiranhaUNO
 PiranhaUNO.build.core=arduino:arduino
 PiranhaUNO.build.variant=arduino:standard
 PiranhaUNO.vid.0=0x0403
+PiranhaUNO.pid.0=0x6015
 
 
 ##############################################################
