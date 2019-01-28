@@ -17,7 +17,7 @@
           "category": "Trema.RU",
           "url": "https://tremaru.github.io/arduino-board-index/boards/trema-1.0.0.tar",
           "archiveFileName": "trema-1.0.0.tar",
-          "checksum": "SHA-256:9fffa6845ab6e0787c99e24f9ef78c8ad9a77152770481bfbda37b0268c9fcbb",
+          "checksum": "SHA-256:ac13553b2beeae42277f982524d3f523e44171095122ed169b0389bd57a9c7c9",
           "size": "4096",
           "help": {
             "online": "https://wiki.trema.ru"
@@ -39,7 +39,7 @@
           "category": "Trema.RU",
           "url": "https://tremaru.github.io/arduino-board-index/boards/trema-1.0.1.tar",
           "archiveFileName": "trema-1.0.1.tar",
-          "checksum": "SHA-256:bdbf62e5c3a2199670f415b062a02bdfc84fb1c5b22c0007023f5f66843914f5",
+          "checksum": "SHA-256:ac13553b2beeae42277f982524d3f523e44171095122ed169b0389bd57a9c7c9",
           "size": "4096",
           "help": {
             "online": "https://wiki.trema.ru"

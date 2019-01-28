@@ -58,13 +58,13 @@ PiranhaUSBUART.upload.maximum_size=32256
 PiranhaUSBUART.upload.maximum_data_size=2048
 PiranhaUSBUART.upload.speed=115200
 
-PiranhaUSBUART.bootloader.tool=arduino:avrdude
-PiranhaUSBUART.bootloader.low_fuses=0xff
-PiranhaUSBUART.bootloader.unlock_bits=0x3F
-PiranhaUSBUART.bootloader.lock_bits=0x0F
-PiranhaUSBUART.menu.cpu.atmega328.bootloader.high_fuses=0xd8
-PiranhaUSBUART.menu.cpu.atmega328.bootloader.extended_fuses=0xFD
-PiranhaUSBUART.menu.cpu.atmega328.bootloader.file=optiboot/optiboot_atmega328-Mini.hex
+PiranhaPRO.bootloader.tool=arduino:avrdude
+PiranhaPRO.bootloader.low_fuses=0xFF
+PiranhaPRO.bootloader.unlock_bits=0x3F
+PiranhaPRO.bootloader.lock_bits=0x0F
+PiranhaPRO.bootloader.high_fuses=0xd8
+PiranhaPRO.bootloader.extended_fuses=0xFD
+PiranhaPRO.bootloader.file=optiboot/optiboot_atmega328-Mini.hex
 
 PiranhaUSBUART.build.mcu=atmega328p
 PiranhaUSBUART.build.f_cpu=16000000L
