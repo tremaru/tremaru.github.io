@@ -46,6 +46,10 @@ PiranhaPRO.build.f_cpu=16000000L
 PiranhaPRO.build.board=AVR_PiranhaProMini
 PiranhaPRO.build.core=arduino:arduino
 PiranhaPRO.build.variant=arduino:standard
+
+##############################################################
+
+
+PiranhaPRO.name=Converter USB-UART (Piranha)
 PiranhaPRO.vid.0=0x0403
 PiranhaPRO.pid.0=0x6014
-
