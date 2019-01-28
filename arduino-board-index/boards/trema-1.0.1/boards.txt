@@ -26,7 +26,7 @@ PiranhaUNO.pid.0=0x6015
 
 ##############################################################
 
-PiranhaPRO.name=Piranha Pro Mini
+PiranhaPRO.name=Piranha Pro Mini1
 
 PiranhaPRO.upload.tool=avrdude
 PiranhaPRO.upload.protocol=arduino
