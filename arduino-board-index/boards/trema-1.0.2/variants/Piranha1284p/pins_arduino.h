@@ -133,13 +133,13 @@ static const uint8_t A7 = PIN_A7;
 // specify port for each pin D0-D31
 #define PORT_D0 PD    // D0  - PD0
 #define PORT_D1 PD    // D1  - PD1
-#define PORT_D2 PD    // D2  - PD2
+#define PORT_D2 PB    // D2  - PD2
 #define PORT_D3 PD    // D3  - PD3
 #define PORT_D4 PD    // D4  - PD4
 #define PORT_D5 PD    // D5  - PD5
 #define PORT_D6 PD    // D6  - PD6
 #define PORT_D7 PD    // D7  - PD7
-#define PORT_D8 PB    // D8  - PB2
+#define PORT_D8 PD    // D8  - PB2
 #define PORT_D9 PB    // D9  - PB3
 #define PORT_D10 PB   // D10 - PB4
 #define PORT_D11 PB   // D11 - PB5
@@ -167,13 +167,13 @@ static const uint8_t A7 = PIN_A7;
 // specify port bit for each pin D0-D31
 #define BIT_D0 0    // D0  - PD0
 #define BIT_D1 1    // D1  - PD1
-#define BIT_D2 2    // D2  - PD2
+#define BIT_D8 8    // D2  - PD2
 #define BIT_D3 3    // D3  - PD3
 #define BIT_D4 4    // D4  - PD4
 #define BIT_D5 5    // D5  - PD5
 #define BIT_D6 6    // D6  - PD6
 #define BIT_D7 7    // D7  - PD7
-#define BIT_D8 2    // D8  - PB2
+#define BIT_D2 2    // D8  - PB2
 #define BIT_D9 3    // D9  - PB3
 #define BIT_D10 4   // D10 - PB4
 #define BIT_D11 5   // D11 - PB5
