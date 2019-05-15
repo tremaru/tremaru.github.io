@@ -134,13 +134,13 @@ static const uint8_t A7 = PIN_A7;
 #define PORT_D0 PD    // D0  - PD0
 #define PORT_D1 PD    // D1  - PD1
 #define PORT_D2 PB    // D2  - PD2
-#define PORT_D3 PD    // D3  - PD3
+#define PORT_D3 PB    // D3  - PD3
 #define PORT_D4 PD    // D4  - PD4
 #define PORT_D5 PD    // D5  - PD5
 #define PORT_D6 PD    // D6  - PD6
 #define PORT_D7 PD    // D7  - PD7
 #define PORT_D8 PD    // D8  - PB2
-#define PORT_D9 PB    // D9  - PB3
+#define PORT_D9 PD    // D9  - PB3
 #define PORT_D10 PB   // D10 - PB4
 #define PORT_D11 PB   // D11 - PB5
 #define PORT_D12 PB   // D12 - PB6
