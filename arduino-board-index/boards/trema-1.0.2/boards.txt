@@ -49,7 +49,8 @@ PiranhaULTRA.build.f_cpu=16000000L
 PiranhaULTRA.build.board=AVR_PiranhaULTRA
 PiranhaULTRA.build.core=arduino:arduino
 PiranhaULTRA.build.variant=Piranha1284p
-
+PiranhaULTRA.vid.0=0x0403
+PiranhaULTRA.pid.0=0x6001
 
 
 ##############################################################
