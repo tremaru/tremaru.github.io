@@ -84,7 +84,7 @@
           "architecture": "avr",
           "version": "1.0.3",
           "category": "Trema.RU",
-          "url": "https://tremaru.github.io/arduino-board-index/boards/trema-1.0.2.tar",
+          "url": "https://tremaru.github.io/arduino-board-index/boards/trema-1.0.3.tar",
           "archiveFileName": "trema-1.0.3.tar",
           "checksum": "SHA-256:71e1d9f82231b032747156952baf5df723741ce5d9f7fa8f0c49c1c2e91c01e0",
           "size": "4096",
