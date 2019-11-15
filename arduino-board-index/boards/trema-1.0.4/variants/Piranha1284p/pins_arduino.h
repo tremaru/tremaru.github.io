@@ -21,9 +21,9 @@
 */
 
 /*
-Pin Mapping
+Карта выводов:
 -----------
-*uino     ATmega1284p                     Function
+Piranha   ATmega1284p                     Функции:
 A0  D26   32 - PA5 (PCINT5/ADC5)
 A1  D27   33 - PA4 (PCINT4/ADC4)
 A2  D28   34 - PA3 (PCINT3/ADC3)
@@ -33,33 +33,33 @@ A5  D31   37 - PA0 (PCINT0/ADC0)
 
 D0        9  - PD0 (PCINT24/RXD0/T3)      UART RX0
 D1        10 - PD1 (PCINT25/TXD0)         UART TX0
-D2        11 - PD2 (PCINT26/RXD1/INT0)    IRQ2, UART RX1
-D3        12 - PD3 (PCINT27/TXD1/INT1)    IRQ3, UART TX1
+D2        42 - PB2 (PCINT10/INT2/AIN0)    
+D3        43 - PB3 (PCINT11/OC0A/AIN1)    PWM
 D4        13 - PD4 (PCINT28/XCK1/OC1B)    PWM
 D5        14 - PD5 (PCINT29/OC1A)         PWM
 D6        15 - PD6 (PCINT30/OC2B/ICP)     PWM
 D7        16 - PD7 (PCINT31/OC2A)         PWM
 
-D8        42 - PB2 (PCINT10/INT2/AIN0)  
-D9        43 - PB3 (PCINT11/OC0A/AIN1)    PWM
+D8        11 - PD2 (PCINT26/RXD1/INT0)    IRQ2, UART RX1
+D9        12 - PD3 (PCINT27/TXD1/INT1)    IRQ3, UART TX1
 D10       44 - PB4 (PCINT12/OC0B/SS)      PWM, SPI SS
 D11       1  - PB5 (PCINT13/ICP3/MOSI)    SPI MOSI
 D12       2  - PB6 (PCINT14/OC3A/MISO)    PWM, SPI MISO
 D13       3  - PB7 (PCINT15/OC3B/SCK)     PWM, SPI SCK, LED
 
-SCL D14   19 - PC0 (PCINT16/SCL)          SCL
-SDA D15   20 - PC1 (PCINT17/SDA)          SDA
-L1  D16   21 - PC2 (PCINT18/TCK)          L1
-L2  D17   22 - PC3 (PCINT19/TMS)          L2
+SCL  D14  19 - PC0 (PCINT16/SCL)          SCL
+SDA  D15  20 - PC1 (PCINT17/SDA)          SDA
+L1   D16  21 - PC2 (PCINT18/TCK)          L1
+Key1 D17  22 - PC3 (PCINT19/TMS)          Key1
 
-D18       23 - PC4 (PCINT20/TDO)		  L3
-D19       24 - PC5 (PCINT21/TDI)	      L4	
-D20       25 - PC6 (PCINT22/TOSC1)		
-D21       26 - PC7 (PCINT23/TOSC2)		
-D22       40 - PB0 (PCINT8/T0/XCK0)		Key4
-D23       41 - PB1 (PCINT9/T1/CLK0)		Key3	
-D24  A6   30 - PA7 (PCINT7/ADC7)        Key2
-D25  A7   31 - PA6 (PCINT6/ADC6) 		Key1
+L2   D18  23 - PC4 (PCINT20/TDO)		  L2
+Key2 D19  24 - PC5 (PCINT21/TDI)	      Key2
+L3   D20  25 - PC6 (PCINT22/TOSC1)		  L3
+Key3 D21  26 - PC7 (PCINT23/TOSC2)		  Key3
+D22       40 - PB0 (PCINT8/T0/XCK0)		  
+D23       41 - PB1 (PCINT9/T1/CLK0)		  
+D24  A6   30 - PA7 (PCINT7/ADC7)          
+D25  A7   31 - PA6 (PCINT6/ADC6) 		  
 
 */
 
@@ -68,17 +68,27 @@ D25  A7   31 - PA6 (PCINT6/ADC6) 		Key1
 
 #include <avr/pgmspace.h>
 
+// Количество цифровых и аналоговых выводов:
 #define NUM_DIGITAL_PINS      32
 #define NUM_ANALOG_INPUTS      8
 
+// Выводы шины I2C:
 #define PIN_WIRE_SDA          (14)
 #define PIN_WIRE_SCL          (15)
 
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
+// Встроенные элементы:
 static const uint8_t LED_BUILTIN = 13;
+static const uint8_t LED_BUILTIN_1 = 16;
+static const uint8_t KEY_BUILTIN_1 = 17;
+static const uint8_t LED_BUILTIN_2 = 18;
+static const uint8_t KEY_BUILTIN_2 = 19;
+static const uint8_t LED_BUILTIN_3 = 20;
+static const uint8_t KEY_BUILTIN_3 = 21;
 
+// Выводы шины SPI:
 #define PIN_SPI_SS            (31)
 #define PIN_SPI_MOSI          (11)
 #define PIN_SPI_MISO          (12)
@@ -89,6 +99,7 @@ static const uint8_t MOSI = PIN_SPI_MOSI;
 static const uint8_t MISO = PIN_SPI_MISO;
 static const uint8_t SCK  = PIN_SPI_SCK;
 
+// Аналоговые выводы:
 #define PIN_A0   (26)
 #define PIN_A1   (27)
 #define PIN_A2   (28)
@@ -107,9 +118,9 @@ static const uint8_t A5 = PIN_A5;
 static const uint8_t A6 = PIN_A6;
 static const uint8_t A7 = PIN_A7;
 
+// Вернуть данных по номеру вывода:
 #define ifpin(p,what,ifnot)     (((p) >= 0 && (p) < NUM_DIGITAL_PINS) ? (what) : (ifnot))
 #define PORT_NDX_TO_PCMSK(x)    ((x) == 0 ? &PCMSK0 : ((x) == 1 ? &PCMSK1 : ((x) == 2 ? &PCMSK2 : ((x) == 3 ? &PCMSK3 : (uint8_t *)0))))
-
 
 #define digitalPinToPCICR(p)    ifpin(p,&PCICR,(uint8_t *)0)
 #define digitalPinToPCICRbit(p) ifpin(p,digital_pin_to_pcint[p] >> 3,0)
@@ -121,26 +132,26 @@ static const uint8_t A7 = PIN_A7;
 #define digitalPinHasPWM(p)         ifpin(p,pgm_read_byte(digital_pin_to_timer_PGM + (p)) != NOT_ON_TIMER,1==0)
 #define analogPinToChannel(p)       ((p) <= 5 ? 5 - (p) : ((p) == 6 ? 7 : ((p) == 7 ? 6 : ((p) >= 26 && (p) <= 31 ? 31 - (p) : ((p) == 24 ? 7 : ((p) == 25 ? 6 : -1 ))))))
 
-// return associated INTx number for associated/valid pins,
-// otherwise NOT_AN_INTERRUPT
-#define digitalPinToInterrupt(p) ((p) == 2 ? 0 : ((p) == 3 ? 1 : ((p) == 8 ? 2 : NOT_AN_INTERRUPT)))
+// Вернуть номер внешнего прерывания INTx по номеру вывода, или NOT_AN_INTERRUPT:
+#define digitalPinToInterrupt(p) ((p) == 8 ? 0 : ((p) == 9 ? 1 : ((p) == 2 ? 2 : NOT_AN_INTERRUPT)))
 
+// Порты выводов:
 #define PA 1
 #define PB 2
 #define PC 3
 #define PD 4
 
-// specify port for each pin D0-D31
+// Список указывает какой из выводов D0-D31 отностится к какому из портов PA-PD:
 #define PORT_D0 PD    // D0  - PD0
 #define PORT_D1 PD    // D1  - PD1
-#define PORT_D2 PB    // D2  - PD2
-#define PORT_D3 PB    // D3  - PD3
+#define PORT_D2 PB    // D2  - PB2
+#define PORT_D3 PB    // D3  - PB3
 #define PORT_D4 PD    // D4  - PD4
 #define PORT_D5 PD    // D5  - PD5
 #define PORT_D6 PD    // D6  - PD6
 #define PORT_D7 PD    // D7  - PD7
-#define PORT_D8 PD    // D8  - PB2
-#define PORT_D9 PD    // D9  - PB3
+#define PORT_D8 PD    // D8  - PD2
+#define PORT_D9 PD    // D9  - PD3
 #define PORT_D10 PB   // D10 - PB4
 #define PORT_D11 PB   // D11 - PB5
 #define PORT_D12 PB   // D12 - PB6
@@ -164,17 +175,17 @@ static const uint8_t A7 = PIN_A7;
 #define PORT_D30 PA   // D30/A4 - PA1
 #define PORT_D31 PA   // D31/A5 - PA0
 
-// specify port bit for each pin D0-D31
+// Список указывает позицию бита вывода в своём порту:
 #define BIT_D0 0    // D0  - PD0
 #define BIT_D1 1    // D1  - PD1
-#define BIT_D2 2    // D2  - PD2
-#define BIT_D3 3    // D3  - PD3
+#define BIT_D2 2    // D2  - PB2
+#define BIT_D3 3    // D3  - PB3
 #define BIT_D4 4    // D4  - PD4
 #define BIT_D5 5    // D5  - PD5
 #define BIT_D6 6    // D6  - PD6
 #define BIT_D7 7    // D7  - PD7
-#define BIT_D8 2    // D8  - PB2
-#define BIT_D9 3    // D9  - PB3
+#define BIT_D8 2    // D8  - PD2
+#define BIT_D9 3    // D9  - PD3
 #define BIT_D10 4   // D10 - PB4
 #define BIT_D11 5   // D11 - PB5
 #define BIT_D12 6   // D12 - PB6
@@ -203,6 +214,7 @@ static const uint8_t A7 = PIN_A7;
 #define PORT_TO_OUTPUT(x) (x == 1 ? &PORTA : (x == 2 ? &PORTB : (x == 3 ? &PORTC : (x == 4 ? &PORTD : NOT_A_PORT))))
 #define PORT_TO_INPUT(x)  (x == 1 ? &PINA : (x == 2 ? &PINB : (x == 3 ? &PINC : (x == 4 ? &PIND : NOT_A_PORT)))) 
 
+// Номера прерываний смены уровня (Pin Change INTerrupts) PCINT:
 #ifndef ARDUINO_MAIN
 extern const uint8_t digital_pin_to_pcint[];
 #else
@@ -210,14 +222,14 @@ const uint8_t digital_pin_to_pcint[NUM_DIGITAL_PINS] =
 {
   24,   // D0  - PD0
   25,   // D1  - PD1
-  26,   // D2  - PD2
-  27,   // D3  - PD3
+  10,   // D2  - PB2
+  11,   // D3  - PB3
   28,   // D4  - PD4
   29,   // D5  - PD5
   30,   // D6  - PD6
   31,   // D7  - PD7
-  10,   // D8  - PB2
-  11,   // D9  - PB3
+  26,   // D8  - PD2
+  27,   // D9  - PD3
   12,   // D10 - PB4
   13,   // D11 - PB5
   14,   // D12 - PB6
@@ -242,9 +254,7 @@ const uint8_t digital_pin_to_pcint[NUM_DIGITAL_PINS] =
   0,    // D31/A5 - PA0
 };
 
-// these arrays map port names (e.g. port B) to the
-// appropriate addresses for various functions (e.g. reading
-// and writing)
+// Ссылки на порт для разных действий:
 const uint16_t PROGMEM port_to_mode_PGM[] =
 {
   NOT_A_PORT,
@@ -272,7 +282,7 @@ const uint16_t PROGMEM port_to_input_PGM[] =
   (uint16_t) &PIND,
 };
 
-
+// Функция возвращает номер порта к которому подключён вывод:
 const uint8_t PROGMEM digital_pin_to_port_PGM[NUM_DIGITAL_PINS] =
 {
   PORT_D0,
@@ -309,6 +319,7 @@ const uint8_t PROGMEM digital_pin_to_port_PGM[NUM_DIGITAL_PINS] =
   PORT_D31
 };
 
+// Функция возвращает позицию бита вывода порта:
 const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[NUM_DIGITAL_PINS] =
 {
   _BV(BIT_D0),
@@ -345,18 +356,19 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[NUM_DIGITAL_PINS] =
   _BV(BIT_D31)
 };
 
+// Функция позволяет определить таймер и канал к которому подключён вывод:
 const uint8_t PROGMEM digital_pin_to_timer_PGM[NUM_DIGITAL_PINS] =
 {
   NOT_ON_TIMER,   // D0  - PD0
   NOT_ON_TIMER,   // D1  - PD1
-  NOT_ON_TIMER,   // D2  - PD2
-  NOT_ON_TIMER,   // D3  - PD3
+  NOT_ON_TIMER,   // D2  - PB2
+  TIMER0A,        // D3  - PB3
   TIMER1B,        // D4  - PD4
   TIMER1A,        // D5  - PD5
   TIMER2B,        // D6  - PD6
   TIMER2A,        // D7  - PD7
-  NOT_ON_TIMER,   // D8  - PB2
-  TIMER0A,        // D9  - PB3
+  NOT_ON_TIMER,   // D8  - PD2
+  NOT_ON_TIMER,   // D9  - PD3
   TIMER0B,        // D10 - PB4
   NOT_ON_TIMER,   // D11 - PB5
   TIMER3A,        // D12 - PB6

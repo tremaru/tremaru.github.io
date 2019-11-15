@@ -103,6 +103,31 @@
             }
           ],
           "toolsDependencies": []
+        },
+		{
+          "name": "Piranha AVR Boards",
+          "architecture": "avr",
+          "version": "1.0.4",
+          "category": "Trema.RU",
+          "url": "https://tremaru.github.io/arduino-board-index/boards/trema-1.0.4.tar",
+          "archiveFileName": "trema-1.0.4.tar",
+          "checksum": "SHA-256:20b86c0c4a526190cfea1ec1995629bebd41c68b6718a39fd2908c0d4c5b53ba",
+          "size": "337920",
+          "help": {
+            "online": "https://wiki.trema.ru"
+          },
+          "boards": [
+            {
+              "name": "Piranha UNO"
+            },
+            {
+              "name": "Piranha ULTRA"
+            },
+            {
+              "name": "Piranha Pro Mini"
+            }
+          ],
+          "toolsDependencies": []
         }
       ]
     }
