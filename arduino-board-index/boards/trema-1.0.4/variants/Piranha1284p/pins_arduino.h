@@ -89,7 +89,7 @@ static const uint8_t LED_BUILTIN_3 = 20;
 static const uint8_t KEY_BUILTIN_3 = 21;
 
 // Выводы шины SPI:
-#define PIN_SPI_SS            (31)
+#define PIN_SPI_SS            (10)
 #define PIN_SPI_MOSI          (11)
 #define PIN_SPI_MISO          (12)
 #define PIN_SPI_SCK           (13)
